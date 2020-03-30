@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class MapRotation : MonoBehaviour
 {
-    private float a;
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    a = 1;
-    //}
+    private float speed = 10f;
+    //Start is called before the first frame update
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    var rot = transform.rotation;
-    //    transform.Rotate(rot.x, rot.y + a, rot.z);
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+        //var rot = transform.rotation;
+        //transform.Rotate(rot.x, rot.y + a, rot.z);
+
+        transform.Rotate(Vector3.up * speed * Time.deltaTime);
+    }
 }
